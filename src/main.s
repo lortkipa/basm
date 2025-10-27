@@ -24,18 +24,18 @@
         movq %rbp, %rsp
 
         # exit with success
-        xorl %edi, %edi
+        xorl %eax, %eax
         call exit
 
     no_args_error:
         # log error msg
-        leaq no_args_msg(%rip), %rdi
-        movl $104, %esi
-        call console_print
+        leaq no_args_msg(%rip), %rax
+        movl $104, %ecx
+        call print
 
         # restore stack frame
         movq %rbp, %rsp
 
         # exit with failure
-        movl $1, %edi
+        movl $1, %eax
         call exit
