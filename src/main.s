@@ -6,6 +6,8 @@
                  .ascii "basic usage: basm [INPUT_FILE] -o [OUTPUT_FILE]\n"
                  .ascii "for additional help: basm --help\n"
 
+    comp: .asciz "123456789"
+
 .section .text
 
     .global main
@@ -20,6 +22,16 @@
         cmpb $1, (%rbp)
         je no_args_error
 
+        # --- test
+        movq 16(%rbp), %rax
+        call string_length
+        addl $'0', %eax
+        movl %eax, (%rsp)
+        movq %rsp, %rax
+        movl $1, %ecx
+        call print
+        # --- test
+
         # restore stack frame
         movq %rbp, %rsp
 
@@ -27,6 +39,7 @@
         xorl %eax, %eax
         call exit
 
+    # alert about no arguments
     no_args_error:
         # log error msg
         leaq no_args_msg(%rip), %rax
