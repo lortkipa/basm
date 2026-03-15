@@ -27,17 +27,33 @@
         # print string
         call print_len
 
+        # print new-line and return
+        jmp print_nl
+
+    # print null-terminated string
+    # rsi - string
+    .global print_nt
+    print_nt:
+        # get length of string
+        call str_len
+
+        # print string with length
+        mov edx, eax
+        call print_len
+
+        ret
+
+    # print null-terminated string followed by new-line
+    # rsi - string
+    .global println_nt
+    println_nt:
+        # print string
+        call print_nt
+
+        print_nl:
         # print new-line
         lea rsi, [rip + nl]
         mov edx, 1
         call print_len
 
         ret
-
-    # print null-terminated string
-    .global print_nt
-    print_nt:
-
-    # print null-terminated string followed by new-line
-    .global println_nt
-    println_nt:

@@ -4,17 +4,17 @@
     - [x] success
     - [x] failure
 
-- [ ] print
+- [x] print
     - [x] with length
         - [x] without new-line
         - [x] with new-line
-    - [ ] null-terminated
-        - [ ] without new-line
-        - [ ] with new-line
+    - [x] null-terminated
+        - [x] without new-line
+        - [x] with new-line
 
 - [ ] string
     - [ ] null-terminated
-        - [ ] get length
+        - [x] get length
         - [ ] compare
     - [ ] with length
         - [ ] compare
