@@ -1,5 +1,6 @@
 # assemble
-../bin/basm entry(main) files(main.s) out(app)
+./bin/basm
+# ../bin/basm entry(main) files(main.s) out(app)
 
-# run
-./app
+# run executable
+#./app

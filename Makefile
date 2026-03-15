@@ -14,6 +14,13 @@ ENTRY := main
 ASSEMBLER := as
 LINKER := ld
 
+# run test
+.PHONY: run
+run:
+	@echo "Running App..."
+	@./test/run.sh
+	@echo "App Terminated..."
+
 # compile every .o to executable
 $(BIN_DIR)/$(NAME): $(OBJ_FILES)
 	@$(LINKER) $^ -e $(ENTRY) -o $@
