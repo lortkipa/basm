@@ -5,9 +5,9 @@
     - [x] failure
 
 - [ ] print
-    - [ ] with length
-        - [ ] without new-line
-        - [ ] with new-line
+    - [x] with length
+        - [x] without new-line
+        - [x] with new-line
     - [ ] null-terminated
         - [ ] without new-line
         - [ ] with new-line
