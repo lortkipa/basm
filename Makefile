@@ -21,6 +21,7 @@ $(BIN_DIR)/$(NAME): $(OBJ_FILES)
 
 # compile each .s to .o
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.s | $(BIN_DIR)
+	@mkdir -p $(dir $@)
 	@$(ASSEMBLER) $< -o $@
 	@echo 'File Compiled: $@'
 

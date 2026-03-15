@@ -1,6 +1,8 @@
 - [x] simple Makefile
 
-- [ ] exit
+- [x] exit
+    - [x] success
+    - [x] failure
 
 - [ ] print
     - [ ] with length
