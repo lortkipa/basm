@@ -1,0 +1,17 @@
+# binaries folder
+bin/
+
+# binary files
+*.bin
+*.o
+*.obj
+*.exe
+*.elf
+*.efi
+*.lib
+*.so
+*.img
+*.iso
+
+# vscode
+.vscode
