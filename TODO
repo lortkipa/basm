@@ -1,0 +1,22 @@
+- [x] simple Makefile
+
+- [ ] exit
+
+- [ ] print
+    - [ ] with length
+        - [ ] without new-line
+        - [ ] with new-line
+    - [ ] null-terminated
+        - [ ] without new-line
+        - [ ] with new-line
+
+- [ ] string
+    - [ ] null-terminated
+        - [ ] get length
+        - [ ] compare
+    - [ ] with length
+        - [ ] compare
+
+- [ ] check for "no input provided" error
+
+- [ ] check for "help with other arguments" error
